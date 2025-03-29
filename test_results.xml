@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctest binary="./build/tests/tests" version="2.4.11">
+  <Options order_by="file" rand_seed="0" first="0" last="4294967295" abort_after="0" subcase_filter_levels="2147483647" case_sensitive="false" no_throw="false" no_skip="false"/>
+  <TestSuite>
+    <TestCase name="test simple allocations" filename="/Users/niladridas/desktop/mlx/mlx/tests/allocator_tests.cpp" line="11">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test large allocations" filename="/Users/niladridas/desktop/mlx/mlx/tests/allocator_tests.cpp" line="35">
+      <OverallResultsAsserts successes="0" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arg reduce small" filename="/Users/niladridas/desktop/mlx/mlx/tests/arg_reduce_tests.cpp" line="47">
+      <OverallResultsAsserts successes="104" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arg reduce against cpu" filename="/Users/niladridas/desktop/mlx/mlx/tests/arg_reduce_tests.cpp" line="104">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arg reduce bool" filename="/Users/niladridas/desktop/mlx/mlx/tests/arg_reduce_tests.cpp" line="146">
+      <OverallResultsAsserts successes="52" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arg reduce edge cases" filename="/Users/niladridas/desktop/mlx/mlx/tests/arg_reduce_tests.cpp" line="181">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arg reduce irregular strides" filename="/Users/niladridas/desktop/mlx/mlx/tests/arg_reduce_tests.cpp" line="190">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test array basics" filename="/Users/niladridas/desktop/mlx/mlx/tests/array_tests.cpp" line="11">
+      <OverallResultsAsserts successes="51" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test array types" filename="/Users/niladridas/desktop/mlx/mlx/tests/array_tests.cpp" line="108">
+      <OverallResultsAsserts successes="62" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test array metadata" filename="/Users/niladridas/desktop/mlx/mlx/tests/array_tests.cpp" line="262">
+      <OverallResultsAsserts successes="162" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test array iteration" filename="/Users/niladridas/desktop/mlx/mlx/tests/array_tests.cpp" line="546">
+      <OverallResultsAsserts successes="11" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test array shared buffer" filename="/Users/niladridas/desktop/mlx/mlx/tests/array_tests.cpp" line="568">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test make empty array" filename="/Users/niladridas/desktop/mlx/mlx/tests/array_tests.cpp" line="594">
+      <OverallResultsAsserts successes="10" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test stop gradient" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="18">
+      <OverallResultsAsserts successes="11" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test jvp" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="89">
+      <OverallResultsAsserts successes="11" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vjp" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="154">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test grad" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="219">
+      <OverallResultsAsserts successes="31" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test creation grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="329">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test op vjps" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="355">
+      <OverallResultsAsserts successes="66" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test gather and take grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="674">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test slice grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="727">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test min and max vjp" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="777">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test reshape and transpose grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="843">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test copy grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="867">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test matmul vjp" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="879">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test concatenate grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="906">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test split grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="928">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test comparison grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="957">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test as_strided grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="983">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test jvp from vjp" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="1017">
+      <OverallResultsAsserts successes="23" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test complex gradients" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="1114">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test scan grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="1159">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test update state" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="1253">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test grad types" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="1269">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test grad dynamic slices" filename="/Users/niladridas/desktop/mlx/mlx/tests/autograd_tests.cpp" line="1295">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test matmul" filename="/Users/niladridas/desktop/mlx/mlx/tests/blas_tests.cpp" line="11">
+      <OverallResultsAsserts successes="23" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simple compile" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="17">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile with grad" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="45">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile inputs with primitive" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="54">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile with created array" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="74">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test nested compile" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="94">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test enable and disable compile" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="104">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simplify scalars" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="126">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simplify" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="152">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simplify noops" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="160">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test no simplify" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="176">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simplify multi output" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="210">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile unary fused" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="267">
+      <OverallResultsAsserts successes="15" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile binary fused" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="354">
+      <OverallResultsAsserts successes="13" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile gelu" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="416">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile tape with outside parents" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="465">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile across streams" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="519">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile internal output" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="546">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile deep graph" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="584">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile repeat input" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="598">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile compiled function" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="616">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test transform compiled function" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="631">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fusion kernel reuse" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="642">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fusion types" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="667">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test shapeless compile" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="696">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile strides" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="728">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile change streams" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="738">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test compile lambda" filename="/Users/niladridas/desktop/mlx/mlx/tests/compile_tests.cpp" line="749">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arange" filename="/Users/niladridas/desktop/mlx/mlx/tests/creations_tests.cpp" line="9">
+      <OverallResultsAsserts successes="36" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test astype" filename="/Users/niladridas/desktop/mlx/mlx/tests/creations_tests.cpp" line="126">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test full" filename="/Users/niladridas/desktop/mlx/mlx/tests/creations_tests.cpp" line="153">
+      <OverallResultsAsserts successes="37" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simple custom vjp" filename="/Users/niladridas/desktop/mlx/mlx/tests/custom_vjp_tests.cpp" line="9">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test checkpointing" filename="/Users/niladridas/desktop/mlx/mlx/tests/custom_vjp_tests.cpp" line="36">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test device placement" filename="/Users/niladridas/desktop/mlx/mlx/tests/device_tests.cpp" line="11">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test einsum path" filename="/Users/niladridas/desktop/mlx/mlx/tests/einsum_tests.cpp" line="8">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test einsum" filename="/Users/niladridas/desktop/mlx/mlx/tests/einsum_tests.cpp" line="53">
+      <OverallResultsAsserts successes="13" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eval" filename="/Users/niladridas/desktop/mlx/mlx/tests/eval_tests.cpp" line="9">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eval multiple" filename="/Users/niladridas/desktop/mlx/mlx/tests/eval_tests.cpp" line="27">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eval with tracer when not tracing" filename="/Users/niladridas/desktop/mlx/mlx/tests/eval_tests.cpp" line="51">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eval graph retention when not tracing" filename="/Users/niladridas/desktop/mlx/mlx/tests/eval_tests.cpp" line="68">
+      <OverallResultsAsserts successes="10" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export basic functions" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="20">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export function with no inputs" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="46">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export multi output primitives" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="62">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export primitives with state" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="80">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export functions with kwargs" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="97">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export function with variable inputs" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="124">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test export function on different stream" filename="/Users/niladridas/desktop/mlx/mlx/tests/export_import_tests.cpp" line="153">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fft basics" filename="/Users/niladridas/desktop/mlx/mlx/tests/fft_tests.cpp" line="9">
+      <OverallResultsAsserts successes="23" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test real ffts" filename="/Users/niladridas/desktop/mlx/mlx/tests/fft_tests.cpp" line="97">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fftn" filename="/Users/niladridas/desktop/mlx/mlx/tests/fft_tests.cpp" line="123">
+      <OverallResultsAsserts successes="22" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fft with provided shape" filename="/Users/niladridas/desktop/mlx/mlx/tests/fft_tests.cpp" line="198">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fft vmap" filename="/Users/niladridas/desktop/mlx/mlx/tests/fft_tests.cpp" line="223">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test fft grads" filename="/Users/niladridas/desktop/mlx/mlx/tests/fft_tests.cpp" line="241">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="[mlx.core.linalg.norm] no ord" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="13">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="[mlx.core.linalg.norm] double ord" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="77">
+      <OverallResultsAsserts successes="50" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="[mlx.core.linalg.norm] string ord" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="252">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test QR factorization" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="308">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test SVD factorization" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="327">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test matrix inversion" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="368">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test matrix cholesky" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="390">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test matrix pseudo-inverse" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="416">
+      <OverallResultsAsserts successes="11" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test cross product" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="458">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test matrix eigh" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="503">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test lu" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="541">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test solve" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="564">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test solve_triangluar" filename="/Users/niladridas/desktop/mlx/mlx/tests/linalg_tests.cpp" line="614">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test save_safetensors" filename="/Users/niladridas/desktop/mlx/mlx/tests/load_tests.cpp" line="17">
+      <OverallResultsAsserts successes="10" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test gguf" filename="/Users/niladridas/desktop/mlx/mlx/tests/load_tests.cpp" line="43">
+      <OverallResultsAsserts successes="25" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test gguf metadata" filename="/Users/niladridas/desktop/mlx/mlx/tests/load_tests.cpp" line="97">
+      <OverallResultsAsserts successes="25" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test single array serialization" filename="/Users/niladridas/desktop/mlx/mlx/tests/load_tests.cpp" line="204">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal device" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="16">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal arange" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="22">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal full" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="37">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal astype" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="66">
+      <OverallResultsAsserts successes="10" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal reshape" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="83">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal reduce" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="99">
+      <OverallResultsAsserts successes="32" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal binary ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="193">
+      <OverallResultsAsserts successes="38" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal unary ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="341">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal random" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="395">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal matmul" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="418">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test metal validation" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="443">
+      <OverallResultsAsserts successes="0" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test memory info" filename="/Users/niladridas/desktop/mlx/mlx/tests/metal_tests.cpp" line="476">
+      <OverallResultsAsserts successes="10" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test copy" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="15">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test reshape" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="30">
+      <OverallResultsAsserts successes="54" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test flatten" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="139">
+      <OverallResultsAsserts successes="13" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test unflatten" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="166">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test squeeze and expand" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="183">
+      <OverallResultsAsserts successes="18" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test slice" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="211">
+      <OverallResultsAsserts successes="39" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test slice update" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="331">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test dynamic slice" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="356">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test dynamic slice update" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="375">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test split" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="400">
+      <OverallResultsAsserts successes="45" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test swap and move axes" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="477">
+      <OverallResultsAsserts successes="24" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test transpose" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="517">
+      <OverallResultsAsserts successes="36" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test comparison ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="599">
+      <OverallResultsAsserts successes="45" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test is nan" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="725">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test is inf" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="751">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test all close" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="782">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test is close" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="794">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test reduction ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="824">
+      <OverallResultsAsserts successes="147" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test irregular binary ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1115">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arithmetic unary ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1136">
+      <OverallResultsAsserts successes="116" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test error functions" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1546">
+      <OverallResultsAsserts successes="30" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test arithmetic binary ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1635">
+      <OverallResultsAsserts successes="41" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test broadcast" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1787">
+      <OverallResultsAsserts successes="45" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test gather" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1898">
+      <OverallResultsAsserts successes="25" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test take" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="1976">
+      <OverallResultsAsserts successes="28" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test take along axis" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2062">
+      <OverallResultsAsserts successes="18" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test put along axis" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2128">
+      <OverallResultsAsserts successes="10" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test scatter" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2170">
+      <OverallResultsAsserts successes="28" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test is positive infinity" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2336">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test is negative infinity" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2359">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test scatter types" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2382">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test complex ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2404">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test as_strided op" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2493">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test scan op" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2510">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test pad" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2571">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test power" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2600">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test where" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2633">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test stack" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2712">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eye" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2741">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test tri" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2754">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test tril" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2778">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test triu" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2802">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test identity" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2826">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eye with positive k offset" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2850">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test eye with negative k offset" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2859">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test basic clipping" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2868">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test clipping with only min" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2875">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test clipping with only max" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2882">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test linspace" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2889">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test quantize dequantize" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2903">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test repeat" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2921">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="tile" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2966">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="tensordot" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="2992">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="outer" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3028">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="inner" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3046">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test divmod" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3072">
+      <OverallResultsAsserts successes="14" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test diagonal" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3131">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test diag" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3171">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test issubdtype" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3214">
+      <OverallResultsAsserts successes="397" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test atleast_1d" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3400">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test atleast_1d vector" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3417">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test atleast_2d" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3430">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test atleast_2d vector" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3447">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test atleast_3d" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3460">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test atleast_3d vector" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3477">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test topk" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3490">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test meshgrid" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3509">
+      <OverallResultsAsserts successes="5" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test conv1d" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3534">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test conv2d" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3633">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test trace" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3762">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test view" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3779">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test roll" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3791">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test contiguous" filename="/Users/niladridas/desktop/mlx/mlx/tests/ops_tests.cpp" line="3823">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random key" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="11">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test global rng" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="26">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random split" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="39">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random bits" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="56">
+      <OverallResultsAsserts successes="28" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random uniform" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="244">
+      <OverallResultsAsserts successes="33" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random normal" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="372">
+      <OverallResultsAsserts successes="16" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random multivariate_normal" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="423">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random randint" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="483">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test random bernoulli" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="521">
+      <OverallResultsAsserts successes="13" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="Test truncated normal" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="566">
+      <OverallResultsAsserts successes="11" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test categorical" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="607">
+      <OverallResultsAsserts successes="18" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test laplace" filename="/Users/niladridas/desktop/mlx/mlx/tests/random_tests.cpp" line="647">
+      <OverallResultsAsserts successes="22" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test stream management" filename="/Users/niladridas/desktop/mlx/mlx/tests/scheduler_tests.cpp" line="10">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test asynchronous launch" filename="/Users/niladridas/desktop/mlx/mlx/tests/scheduler_tests.cpp" line="39">
+      <OverallResultsAsserts successes="1" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test stream placement" filename="/Users/niladridas/desktop/mlx/mlx/tests/scheduler_tests.cpp" line="69">
+      <OverallResultsAsserts successes="0" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test scheduler races" filename="/Users/niladridas/desktop/mlx/mlx/tests/scheduler_tests.cpp" line="110">
+      <OverallResultsAsserts successes="0" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test type promotion" filename="/Users/niladridas/desktop/mlx/mlx/tests/utils_tests.cpp" line="9">
+      <OverallResultsAsserts successes="12" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test normalize axis" filename="/Users/niladridas/desktop/mlx/mlx/tests/utils_tests.cpp" line="29">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test finfo" filename="/Users/niladridas/desktop/mlx/mlx/tests/utils_tests.cpp" line="47">
+      <OverallResultsAsserts successes="9" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test iinfo" filename="/Users/niladridas/desktop/mlx/mlx/tests/utils_tests.cpp" line="59">
+      <OverallResultsAsserts successes="7" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test simple vmap" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="9">
+      <OverallResultsAsserts successes="38" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap with eval" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="209">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap comparison ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="240">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap creation ops" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="267">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap slice" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="298">
+      <OverallResultsAsserts successes="2" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap concatenate" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="316">
+      <OverallResultsAsserts successes="3" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap gather" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="333">
+      <OverallResultsAsserts successes="6" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap scatter" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="395">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap SVD" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="468">
+      <OverallResultsAsserts successes="8" failures="0" test_case_success="true"/>
+    </TestCase>
+    <TestCase name="test vmap dynamic slices" filename="/Users/niladridas/desktop/mlx/mlx/tests/vmap_tests.cpp" line="519">
+      <OverallResultsAsserts successes="4" failures="0" test_case_success="true"/>
+    </TestCase>
+  </TestSuite>
+  <OverallResultsAsserts successes="3219" failures="0"/>
+  <OverallResultsTestCases successes="220" failures="0" skipped="0"/>
+</doctest>
