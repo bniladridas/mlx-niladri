@@ -4,7 +4,19 @@
 [**Documentation**](https://ml-explore.github.io/mlx/build/html/index.html) |
 [**Examples**](#examples) 
 
-[![CircleCI](https://circleci.com/gh/ml-explore/mlx.svg?style=svg)](https://circleci.com/gh/ml-explore/mlx)
+> **Important Note**: This repository is a fork of [Apple's MLX framework](https://github.com/ml-explore/mlx). The original work and implementation was done by Apple's machine learning research team. Our contributions and modifications are built on top of their foundational work.
+
+## Our Contributions
+
+This fork is currently in its initial setup phase:
+- ✅ Successfully forked and set up the MLX framework
+- ✅ Updated citation information
+- ⏳ Awaiting further development and specific improvements
+- 🔄 Planning phase for future enhancements and research directions
+
+Stay tuned for updates as we continue to build upon Apple's excellent foundation.
+
+## Original MLX Framework
 
 MLX is an array framework for machine learning on Apple silicon,
 brought to you by Apple machine learning research.
