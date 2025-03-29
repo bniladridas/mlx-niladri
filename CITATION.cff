@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: mlx
+title: MLX-Niladri
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
@@ -7,10 +7,9 @@ type: software
 authors:
   - given-names: Niladri
     family-names: Das
-repository-code: 'https://github.com/ml-explore'
+repository-code: 'https://github.com/bniladridas/mlx-niladri'
 abstract: >-
-  MLX: efficient and flexible machine learning on Apple
-  silicon
+  MLX-Niladri: A fork of MLX framework for efficient and flexible machine learning on Apple silicon
 license: MIT
 copyright: Copyright © 2023-2025 Apple Inc. and Niladri Das
 
@@ -19,6 +18,6 @@ preferred-citation:
   authors:
     - given-names: Niladri
       family-names: Das
-  title: "mlx"
+  title: "MLX-Niladri"
   year: 2025
-  url: 'https://github.com/ml-explore'
+  url: 'https://github.com/bniladridas/mlx-niladri'

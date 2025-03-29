@@ -1,4 +1,4 @@
-# MLX
+# MLX-Niladri
 
 [**Quickstart**](#quickstart) | [**Installation**](#installation) |
 [**Documentation**](https://ml-explore.github.io/mlx/build/html/index.html) |
