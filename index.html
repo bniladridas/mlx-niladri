@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>MLX Installation Guide</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="MLX Installation Guide - Apple Silicon ML Framework">
+    <meta property="og:description" content="Complete installation guide for Apple's MLX machine learning framework. Build high-performance ML applications on Apple Silicon with Metal acceleration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ml-explore.github.io/mlx/">
+    <meta property="og:image" content="https://private-user-images.githubusercontent.com/125604915/459588910-5a3f8a0f-6df6-477d-b0e4-b84eb36b1086.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA5NjU4MTMsIm5iZiI6MTc1MDk2NTUxMywicGF0aCI6Ii8xMjU2MDQ5MTUvNDU5NTg4OTEwLTVhM2Y4YTBmLTZkZjYtNDc3ZC1iMGU0LWI4NGViMzZiMTA4Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjI2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYyNlQxOTE4MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05NjhjNWJmNjEwMTkzMGRhNGExYzNiMmJhNTRlNjQ3ZTM3ZTk5YWRiYjhhMGNjZDE0OTcxOGFjNmQzYzQyNWE3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.a8JfdEZMdCq1i149nVKeQh6aBM_qr4ROZlQ90jV9Sv4">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Dark Modern Art">
+    <meta property="og:site_name" content="MLX Framework">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MLX Installation Guide - Apple Silicon ML Framework">
+    <meta name="twitter:description" content="Complete installation guide for Apple's MLX machine learning framework. Build high-performance ML applications on Apple Silicon with Metal acceleration.">
+    <meta name="twitter:image" content="https://private-user-images.githubusercontent.com/125604915/459588910-5a3f8a0f-6df6-477d-b0e4-b84eb36b1086.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA5NjU4MTMsIm5iZiI6MTc1MDk2NTUxMywicGF0aCI6Ii8xMjU2MDQ5MTUvNDU5NTg4OTEwLTVhM2Y4YTBmLTZkZjYtNDc3ZC1iMGU0LWI4NGViMzZiMTA4Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjI2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYyNlQxOTE4MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05NjhjNWJmNjEwMTkzMGRhNGExYzNiMmJhNTRlNjQ3ZTM3ZTk5YWRiYjhhMGNjZDE0OTcxOGFjNmQzYzQyNWE3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.a8JfdEZMdCq1i149nVKeQh6aBM_qr4ROZlQ90jV9Sv4">
+    <meta name="twitter:image:alt" content="Dark Modern Art">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="Step-by-step installation guide for Apple MLX machine learning framework on Apple Silicon. Includes Xcode setup, build instructions, and verification steps.">
+    <meta name="keywords" content="Apple MLX, Apple Silicon, Machine Learning, Metal, iOS Development, macOS, M1, M2, M3, M4">
+    <meta name="author" content="Apple MLX Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon using data URI -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMDAwMDAwIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMF8xIiB4MT0iOCIgeTE9IjgiIHgyPSIyNCIgeTI9IjI0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2MzY2RjEiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOEI1Q0Y2Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHBhdGggZD0iTTE2IDhMMjQgMTZMMTYgMjRMOCAxNkwxNiA4WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzBfMSkiLz4KPC9zdmc+Cg==">
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-tertiary: #666666;
+            --accent: #6366f1;
+            --accent-soft: rgba(99, 102, 241, 0.1);
+            --border: #1a1a1a;
+            --code-bg: #111111;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+        }
+        
+        /* Typography Scale - Mobile First */
+        .title {
+            font-size: 2.5rem;
+            font-weight: 200;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        
+        h2 {
+            font-size: 1.375rem;
+            font-weight: 400;
+            margin: 2.5rem 0 1.25rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Clean Sections */
+        .section {
+            margin: 2.5rem 0;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        /* Mobile-Optimized Step Indicators */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+        
+        .step-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        /* Mobile-Friendly Code Blocks */
+        .terminal {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1.25rem 0;
+            overflow-x: auto;
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            -webkit-overflow-scrolling: touch;
+            white-space: pre;
+        }
+        
+        .prompt {
+            color: var(--success);
+            margin-right: 0.5rem;
+        }
+        
+        .command {
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+        
+        .output {
+            color: var(--text-tertiary);
+            display: block;
+            margin-top: 0.5rem;
+            padding-left: 0.5rem;
+            word-break: break-word;
+        }
+        
+        .error {
+            color: var(--error);
+        }
+        
+        /* Inline Code - Touch Friendly */
+        code {
+            background: var(--accent-soft);
+            color: var(--accent);
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'SF Mono', Monaco, Consolas, monospace;
+            font-size: 0.85em;
+            font-weight: 400;
+            word-break: break-word;
+        }
+        
+        /* Mobile-Optimized Lists */
+        ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        /* Touch-Friendly Highlight Boxes */
+        .highlight {
+            background: var(--accent-soft);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight h3 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Status Indicators */
+        .status-ok {
+            color: var(--success);
+            font-weight: 500;
+        }
+        
+        .status-error {
+            color: var(--error);
+            font-weight: 500;
+        }
+        
+        .status-warning {
+            color: var(--warning);
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 3rem;
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        
+        footer a:hover,
+        footer a:focus {
+            background-color: var(--accent-soft);
+        }
+        
+        /* Responsive Breakpoints */
+        @media (min-width: 480px) {
+            .container {
+                padding: 70px 30px 50px;
+            }
+            
+            .title {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.125rem;
+                margin-bottom: 3rem;
+            }
+            
+            .terminal {
+                padding: 1.25rem;
+                font-size: 0.85rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: 80px 40px 60px;
+            }
+            
+            .title {
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .subtitle {
+                margin-bottom: 4rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                margin: 3rem 0 1.5rem;
+            }
+            
+            .section {
+                margin: 4rem 0;
+                padding: 2rem 0;
+            }
+            
+            .step {
+                gap: 1rem;
+                margin: 2rem 0;
+                padding: 1.5rem;
+            }
+            
+            .terminal {
+                padding: 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .title {
+                font-size: 4rem;
+            }
+        }
+        
+        /* Touch and Accessibility Improvements */
+        .step,
+        .highlight,
+        .terminal {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        
+        .step:active {
+            transform: translateY(1px);
+        }
+        
+        /* Improved Touch Targets */
+        button,
+        a,
+        .step {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Selection */
+        ::selection {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+        
+        /* Focus States for Keyboard Navigation */
+        *:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        /* Light Theme (Optional) */
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-tertiary: #999999;
+            --border: #e5e5e5;
+            --code-bg: #f5f5f5;
+            --accent-soft: rgba(99, 102, 241, 0.08);
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: scale(1.05);
+        }
+        
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+        
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+        
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --accent: #0066cc;
+                --border: #333333;
+            }
+        }
+        
+        /* Custom audio player theming for dark/light mode */
+        audio {
+            background: var(--code-bg);
+            color-scheme: dark;
+            border-radius: 10px;
+        }
+        
+        /* For browsers supporting ::part (Chromium/Edge/Opera/Safari 16.4+) */
+        audio::-webkit-media-controls-panel {
+            background: var(--code-bg);
+            color: var(--accent);
+            border-radius: 10px;
+        }
+        audio::-webkit-media-controls-play-button {
+            filter: invert(60%) sepia(80%) saturate(500%) hue-rotate(220deg);
+        }
+        audio::-webkit-media-controls-timeline {
+            background: var(--accent-soft);
+            border-radius: 4px;
+        }
+        audio::-webkit-media-controls-current-time,
+        audio::-webkit-media-controls-time-remaining {
+            color: var(--text-secondary);
+        }
+        
+        [data-theme="light"] audio {
+            background: var(--code-bg);
+            color-scheme: light;
+        }
+        [data-theme="light"] audio::-webkit-media-controls-panel {
+            background: var(--code-bg);
+            color: var(--accent);
+        }
+        [data-theme="light"] audio::-webkit-media-controls-play-button {
+            filter: none;
+        }
+        
+        /* Fallback for browsers that do not support ::part or ::-webkit-media-controls */
+        /* The audio element background will still match the theme, but controls may not be fully stylable. */
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span id="theme-icon">☀️</span>
+    </button>
+    
+    <div class="container">
+        <header>
+            <h1 class="title">MLX Installation Guide</h1>
+            <p class="subtitle">Machine learning framework for Apple Silicon</p>
+        </header>
+        
+        <main>
+            <section class="section">
+                <h2>Prerequisites</h2>
+                <p>Set up Xcode properly on your Apple Silicon Mac before installing MLX.</p>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install Xcode</h3>
+                        <ul>
+                            <li>Open the App Store</li>
+                            <li>Search for "Xcode" and install</li>
+                            <li>Wait for download completion (several GB)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Accept License</h3>
+                        <p>Open Xcode once to accept the initial license agreements.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Configure Command Line Tools</h3>
+                        <div class="terminal">
+                            <span class="prompt">$</span><span class="command"> sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</span>
+                            <span class="output">Password: ********</span>
+                            
+                            <span class="prompt">$</span><span class="command"> sudo xcodebuild -license accept</span>
+                            <span class="output">License accepted</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Build from Source</h2>
+                <p>Once Xcode is configured, build MLX from source.</p>
+                
+                <div class="terminal">
+                    <span class="prompt">$</span><span class="command"> rm -rf build && mkdir build && cd build</span>
+                    <span class="prompt">$</span><span class="command"> cmake ..</span>
+                    <span class="output">-- The C compiler identification is AppleClang 15.0.0.15000040
+-- The CXX compiler identification is AppleClang 15.0.0.15000040
+-- Found Metal: /System/Library/Frameworks/Metal.framework
+-- Configuring done
+-- Build files have been written to: /Users/username/mlx/build</span>
+                    
+                    <span class="prompt">$</span><span class="command"> make -j8</span>
+                    <span class="output">[  1%] Building CXX object CMakeFiles/mlx.dir/mlx/backend/metal/kernels.cpp.o
+...
+[100%] Built target metal_capture</span>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Verify Installation</h2>
+                <p>Test the build to ensure everything works correctly.</p>
+                
+                <div class="terminal">
+                    <span class="prompt">$</span><span class="command"> ./tests/tests</span>
+                    <span class="output">Running all tests.
+....................
+<span class="status-ok">All tests passed!</span></span>
+                </div>
+                
+                <div class="terminal">
+                    <span class="prompt">$</span><span class="command"> ./examples/cpp/tutorial</span>
+                    <span class="output">array([[1, 1],
+       [1, 1]], dtype=float32)</span>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Build Artifacts</h2>
+                <p>The build process creates several important components:</p>
+                
+                <div class="highlight">
+                    <h3>Core Library</h3>
+                    <p><code>libmlx.a</code> - Main MLX static library</p>
+                </div>
+                
+                <h3>Example Programs</h3>
+                <ul>
+                    <li><code>linear_regression</code> - Linear regression example</li>
+                    <li><code>logistic_regression</code> - Logistic regression example</li>
+                    <li><code>tutorial</code> - Basic operations tutorial</li>
+                    <li><code>metal_capture</code> - Metal performance profiling</li>
+                    <li><code>distributed</code> - Distributed computing example</li>
+                </ul>
+                
+                <h3>Test Suite</h3>
+                <p><code>tests/tests</code> - Comprehensive test executable</p>
+            </section>
+            
+            <section class="section">
+                <h2>System Configuration</h2>
+                
+                <div class="highlight">
+                    <h3>Build Settings</h3>
+                    <div class="terminal">CMAKE_BUILD_TYPE=Release
+MLX_BUILD_TESTS=ON
+MLX_BUILD_EXAMPLES=ON
+MLX_BUILD_METAL=ON
+MLX_BUILD_CPU=ON</div>
+                </div>
+                
+                <h3>System Requirements</h3>
+                <ul>
+                    <li>macOS 13.5 or later (Sonoma recommended)</li>
+                    <li>Python 3.9 or later</li>
+                    <li>Apple Silicon (M1/M2/M3/M4)</li>
+                    <li>8GB RAM minimum (16GB+ recommended)</li>
+                </ul>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Unified Memory:</strong> Zero-copy CPU/GPU data sharing</li>
+                    <li><strong>Lazy Evaluation:</strong> Compute-on-demand optimization</li>
+                    <li><strong>Metal Integration:</strong> Native Apple GPU support</li>
+                    <li><strong>Multi-Device:</strong> Seamless CPU/GPU execution</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2>Usage Examples</h2>
+                
+                <h3>Basic Python Usage</h3>
+                <div class="terminal">
+                    <span class="prompt">$</span><span class="command"> python3 -c "import mlx.core as mx; print(mx.zeros((2,2)))"</span>
+                    <span class="output">array([[0., 0.],
+       [0., 0.]])</span>
+                </div>
+                
+                <h3>Performance Profiling</h3>
+                <div class="terminal">
+                    <span class="prompt">$</span><span class="command"> MTL_CAPTURE_ENABLED=1 python3 your_script.py</span>
+                    <span class="output">Capturing Metal trace for analysis</span>
+                </div>
+                
+                <h3>Environment Variables</h3>
+                <ul>
+                    <li><code>DEVICE=gpu|cpu</code> - Select compute device</li>
+                    <li><code>MTL_CAPTURE_ENABLED=1</code> - Enable Metal capture</li>
+                    <li><code>LOW_MEMORY=1</code> - Optimize for low memory systems</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2>Testing Framework</h2>
+                
+                <h3>Run All Tests</h3>
+                <div class="terminal">
+                    <span class="prompt">$</span><span class="command"> python scripts/run_tests.py</span>
+                    <span class="output">🚀 Starting MLX Test Suite
+✅ All required dependencies found
+🔍 Running C++ tests...
+🐍 Running Python tests...
+<span class="status-ok">All tests completed successfully</span></span>
+                </div>
+                
+                <h3>Test Categories</h3>
+                <ul>
+                    <li><strong>CPU Tests:</strong> Basic array operations and math functions</li>
+                    <li><strong>GPU Tests:</strong> Metal-accelerated computations</li>
+                    <li><strong>Distributed Tests:</strong> Multi-node operations</li>
+                    <li><strong>Integration Tests:</strong> End-to-end workflows</li>
+                </ul>
+            </section>
+        </main>
+        <section class="section" style="padding-bottom:2.5rem;">
+            <div class="custom-audio-card" style="max-width:500px; margin:0 auto; background:var(--bg-secondary); box-shadow:0 2px 16px rgba(0,0,0,0.08); border-radius:18px; padding:2rem 1.5rem; display:flex; flex-direction:column; align-items:center;">
+                <div style="display:flex; align-items:center; gap:1.2rem; width:100%; justify-content:center;">
+                    <button id="customPlayBtn" aria-label="Play/Pause" style="background:var(--accent); border:none; border-radius:50%; width:56px; height:56px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(99,102,241,0.10); cursor:pointer; transition:background 0.2s; color:#fff; font-size:2rem;">
+                        ▶️
+                    </button>
+                    <div style="flex:1;">
+                        <div id="customAudioLabel" style="font-size:1.1rem; color:var(--accent); font-weight:500;">Listen to the Conversation</div>
+                        <div id="customAudioTime" style="font-size:0.95rem; color:var(--text-secondary); margin-top:0.2rem;">00:00</div>
+                    </div>
+                </div>
+                <input id="customAudioSeek" type="range" min="0" max="100" value="0" step="1" style="width:100%; margin-top:1.5rem; accent-color:var(--accent); background:var(--accent-soft); border-radius:6px; height:4px; cursor:pointer;" />
+                <audio id="customAudio" src="audio/conversation.wav" preload="metadata" style="display:none;"></audio>
+                <div style="font-size:0.92rem; color:var(--text-secondary); margin-top:1.2rem; text-align:center;">Hear the original discussion that inspired this guide.<br><span style="font-size:0.85em; color:var(--text-tertiary);">(Playback and download are restricted for privacy.)</span></div>
+            </div>
+            <script>
+            // Custom Audio Player Logic
+            const audio = document.getElementById('customAudio');
+            const playBtn = document.getElementById('customPlayBtn');
+            const seekBar = document.getElementById('customAudioSeek');
+            const timeLabel = document.getElementById('customAudioTime');
+            let isPlaying = false;
+            function formatTime(s) {
+                const m = Math.floor(s/60);
+                const sec = Math.floor(s%60);
+                return `${m.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
+            }
+            audio.addEventListener('loadedmetadata', () => {
+                seekBar.max = Math.floor(audio.duration);
+                timeLabel.textContent = `00:00`;
+            });
+            playBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+            audio.addEventListener('play', () => {
+                playBtn.textContent = '⏸️';
+                isPlaying = true;
+            });
+            audio.addEventListener('pause', () => {
+                playBtn.textContent = '▶️';
+                isPlaying = false;
+            });
+            audio.addEventListener('timeupdate', () => {
+                seekBar.value = Math.floor(audio.currentTime);
+                timeLabel.textContent = `${formatTime(audio.currentTime)}`;
+            });
+            seekBar.addEventListener('input', () => {
+                audio.currentTime = seekBar.value;
+            });
+            // Prevent right-click download
+            audio.addEventListener('contextmenu', e => e.preventDefault());
+            </script>
+        </section>
+       <footer style="text-align:center; font-size:0.95rem; margin-top:1.5rem; color:var(--text-tertiary);">
+  <p>
+    <strong>MLX Installation Guide</strong> • 
+    <a href="https://github.com/ml-explore/mlx" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">
+      Apple MLX
+    </a>
+  </p>
+  <p>
+    Agentic Engineering (author tagged clone):<br/>
+    <a href="https://github.com/bniladridas/mlx-niladri" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">
+      github.com/bniladridas/mlx-niladri
+    </a>
+  </p>
+</footer>
+
+    </div>
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'light') {
+                document.body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+            } else {
+                themeIcon.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>
